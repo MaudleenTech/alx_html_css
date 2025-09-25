@@ -37,3 +37,9 @@ article {
 aside {
   background: #efefef;
 }
+
+.logo {
+  font-size: 36px;  
+  color: #5f3535;   
+  margin-right: 20px;
+}
