@@ -1,327 +1,320 @@
-/* GENERAL STYLES */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+    /* colors */
+    --white: #FFFFFF;
+    --purple: #C271FF;
+    --black: #071629;
 }
 
-body {
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-/* HEADER */
+p,
+h1,
+h2,
+h3,
+a,
+button {
+    font-family: "Source Sans Pro";
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1110px;
+}
+
+/* ------------------nav -------------*/
 header {
-  background-color: #222;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    position: absolute;
+    width: 100%;
+    top: 35px;
 }
 
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+nav {
+    display: flex;
+    justify-content: space-between;
 }
 
-header nav img.logo {
-  width: 120px;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 52px;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+nav a {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--white);
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-}
+/* ---------------banner or hero------------------ */
 
-/* HERO */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 2rem;
-  background-color: #fffae6;
-  gap: 2rem;
+    height: 100vh;
+    background-image: url("https://raw.githubusercontent.com/MaudleenTech/alx_html_css/refs/heads/main/css_advanced/images/Object.png");
+    background-size: cover;
+    background-position: bottom center;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--white);
+
+    padding-top: 120px;
+    padding-bottom: 50px;
 }
 
-.hero-content {
-  max-width: 500px;
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: bold;
+
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  color: #222;
-  margin-bottom: 1rem;
+.words {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.hero-content span {
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ff6f61;
-  margin-bottom: 0.5rem;
+button {
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 100px;
+    border: none;
+    font-weight: 800;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.435);
 }
 
-.hero-content button {
-  padding: 0.75rem 2rem;
-  background-color: #ff6f61;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+h2 {
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 50px;
 }
 
-.hero-image img {
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
+.purple-word {
+    color: var(--purple);
+    font-weight: 600;
 }
 
-/* INSTRUCTORS */
-.instructors {
-  padding: 4rem 2rem;
-  text-align: center;
+.hero p {
+    font-size: 16px;
+    line-height: 24px;
+    font-style: italic;
 }
 
-.instructors h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+h3 {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: bold;
 }
 
-.instructor-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    object-fit: cover;
 }
 
-.instructor-cards div {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  flex: 1 1 200px;
-  text-align: center;
+.members {
+    display: flex;
+    justify-content: space-around;
 }
 
-/* TESTIMONIAL / QUOTES */
+.member {
+    width: 200px;
+}
+
+/* ----------testomonial----------------- */
+
 .testimonial {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background-color: #fff3f0;
-  border-radius: 10px;
-  margin: 2rem;
+    background-color: var(--purple);
+    padding: 70px;
 }
 
-.testimonial-image img {
-  width: 200px;
-  border-radius: 10px;
+.testimonial .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 53px;
+    width: 943px;
+    color: var(--white);
 }
 
-.testimonial-content blockquote {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 1rem;
+.testimonial blockquote {
+    margin-bottom: 30px;
 }
 
-/* VIDEOS LIST / MOST POPULAR TUTORIALS */
+.occupation {
+    font-style: italic;
+}
+
+/*------------------tutorials------------------- */
+
 .tutorials {
-  padding: 4rem 2rem;
-  text-align: center;
+    padding: 80px 0;
 }
 
 .tutorials h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+    text-align: center;
 }
 
-.tutorial-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.tutorials .cards {
+    display: flex;
+    gap: 30px;
 }
 
-.video-card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  flex: 1 1 220px;
-  text-align: center;
+.card {
+    position: relative;
 }
 
-.video-thumb {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+.tutorials .play-icon {
+    position: absolute;
+    z-index: 99;
+    left: 95.5px;
+    top: 45px;
+    /* transform: translateX(50%); */
 }
 
-.video-thumb img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
+.card-text {
+    padding: 10px;
 }
 
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ff6f61;
-  font-size: 2rem;
-  opacity: 0.9;
+.card-text h3 {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.video-card h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
+.card-text p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.511);
+    font-weight: 100;
+    margin-bottom: 20px;
 }
 
-.video-card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.video-card .author {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+.avatar img {
+    width: 40px;
+    aspect-ratio: 1;
 }
 
-.video-card .author img {
-  width: 30px;
-  border-radius: 50%;
+.avatar h4 {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.video-card .rating i {
-  color: gold;
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.video-card p:last-child {
-  font-size: 0.8rem;
-  color: #999;
+.rating p {
+    color: var(--purple);
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
-/* MEMBERSHIP SECTION */
-.membership h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #222;
+/* membership */
+
+.membership {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
 }
 
-.membership-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.membership .wrapper {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 80px;
+
 }
 
-.membership-card {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 2rem 1rem;
-  flex: 1 1 250px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.membership h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.membership-card img {
-  background-color: #ff6f61; /* ensures logo visible on white background */
-  border-radius: 50%;
-  padding: 15px;
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+
+/* --------------------------faqs------------------- */
+
+.faqs {
+    padding: 80px 0;
 }
 
-.membership-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #222;
+.faq-flex {
+    display: flex;
+    gap: 220px;
 }
 
-.membership-card p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #555;
+.faq-flex:nth-child(1) {
+    margin-bottom: 75px;
 }
 
-.membership-card button {
-  padding: 0.75rem 1.5rem;
-  background-color: #ff6f61;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+.faqs h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 100;
+    color: var(--black);
 }
 
-/* FAQ SECTION */
-.faq {
-  padding: 4rem 2rem;
-  background-color: #f5f5f5;
+.faqs h3 {
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
-.faq h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.faq-description {
+    font-size: 14px;
+    line-height: 24px;
+    color: #07162979;
 }
 
-.faq-item {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
+/* -------------FOOTER---------------- */
 
-.faq-item h3 {
-  cursor: pointer;
-}
-
-.faq-item p {
-  display: none;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* FOOTER */
 footer {
-  padding: 2rem;
-  text-align: center;
-  background-color: #222;
-  color: #fff;
+    background-color: var(--black);
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-  }
-  .testimonial {
-    flex-direction: column;
-  }
-  .instructor-cards,
-  .tutorial-cards,
-  .membership-cards {
-    flex-direction: column;
-  }
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials i {
+    color: var(--white);
+}
+
+footer p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.386);
+    font-size: 12px;
+    margin-top: 40px;
 }
